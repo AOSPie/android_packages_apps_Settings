@@ -166,8 +166,4 @@ public class Settings extends SettingsActivity {
     public static class AccountDashboardActivity extends SettingsActivity {}
     public static class SystemDashboardActivity extends SettingsActivity {}
 
-    // omni additions start
-    public static class OmniDashboardActivity extends SettingsActivity {}
-    public static class OmniJawsSettingsActivity extends SettingsActivity { /* empty */ }
-    public static class SwipeToNotificationSuggestionActivity extends SettingsActivity { /* empty */ }
 }

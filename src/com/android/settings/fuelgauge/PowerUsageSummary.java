@@ -27,7 +27,6 @@ import android.os.BatteryStats;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.support.annotation.VisibleForTesting;
-import android.support.v7.preference.Preference;
 import android.text.BidiFormatter;
 import android.text.format.Formatter;
 import android.util.SparseArray;
@@ -51,7 +50,6 @@ import com.android.settings.fuelgauge.anomaly.AnomalyDetectionPolicy;
 import com.android.settings.fuelgauge.batterytip.BatteryTipLoader;
 import com.android.settings.fuelgauge.batterytip.BatteryTipPreferenceController;
 import com.android.settings.fuelgauge.batterytip.tips.BatteryTip;
-import com.android.settings.display.BatteryImagePreferenceController;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
@@ -224,19 +222,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     }
 
     @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        if (KEY_BATTERY_HEADER.equals(preference.getKey())) {
-            new SubSettingLauncher(getContext())
-                        .setDestination(PowerUsageAdvanced.class.getName())
-                        .setSourceMetricsCategory(getMetricsCategory())
-                        .setTitle(R.string.advanced_battery_title)
-                        .launch();
-            return true;
-        }
-        return super.onPreferenceTreeClick(preference);
-    }
-
-    @Override
     public int getMetricsCategory() {
         return MetricsEvent.FUELGAUGE_POWER_USAGE_SUMMARY_V2;
     }
@@ -264,7 +249,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
                 BatteryTipListener */);
         controllers.add(mBatteryTipPreferenceController);
         controllers.add(new BatteryPercentagePreferenceController(context));
-        controllers.add(new BatteryImagePreferenceController(context));
         return controllers;
     }
 

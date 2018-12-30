@@ -138,17 +138,6 @@ import com.android.settings.wifi.calling.WifiCallingSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
-import org.omnirom.omnigears.OmniDashboardFragment;
-import org.omnirom.omnigears.ButtonSettings;
-import org.omnirom.omnigears.ButtonBrightnessSettings;
-import org.omnirom.omnigears.GestureSettings;
-import org.omnirom.omnigears.batterylight.BatteryLightSettings;
-import org.omnirom.omnigears.interfacesettings.BarsSettings;
-import org.omnirom.omnigears.interfacesettings.LockscreenItemSettings;
-import org.omnirom.omnigears.interfacesettings.StyleSettings;
-import org.omnirom.omnigears.moresettings.MoreSettings;
-import org.omnirom.omnigears.moresettings.OmniJawsSettings;
-
 public class SettingsGateway {
 
     /**
@@ -274,18 +263,6 @@ public class SettingsGateway {
             DirectoryAccessDetails.class.getName(),
             ToggleBackupSettingFragment.class.getName(),
             PreviouslyConnectedDeviceDashboardFragment.class.getName(),
-
-            // omni additions start
-            OmniDashboardFragment.class.getName(),
-            StyleSettings.class.getName(),
-            ButtonSettings.class.getName(),
-            ButtonBrightnessSettings.class.getName(),
-            MoreSettings.class.getName(),
-            GestureSettings.class.getName(),
-            BarsSettings.class.getName(),
-            BatteryLightSettings.class.getName(),
-            OmniJawsSettings.class.getName(),
-            LockscreenItemSettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -324,8 +301,5 @@ public class SettingsGateway {
             Settings.DeviceInfoSettingsActivity.class.getName(),
             Settings.EnterprisePrivacySettingsActivity.class.getName(),
             Settings.MyDeviceInfoActivity.class.getName(),
-
-            // Home page > OmniGears
-            Settings.OmniDashboardActivity.class.getName(),
     };
 }

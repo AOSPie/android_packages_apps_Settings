@@ -23,7 +23,7 @@
 
     <com.android.settings.applications.LayoutPreference
         android:key="battery_header"
-        android:selectable="true"
+        android:selectable="false"
         android:layout="@layout/battery_header" />
 
     <PreferenceCategory
@@ -49,10 +49,6 @@
         android:title="@string/battery_percentage"
         android:summary="@string/battery_percentage_description" />
 
-    <SwitchPreference
-        android:key="battery_image"
-        android:title="@string/battery_image"
-        android:summary="@string/battery_image_description"/>
 
     <com.android.settings.fuelgauge.PowerGaugePreference
         android:key="last_full_charge"
